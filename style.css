@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("SF-Pro.ttf") format("truetype");
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("SF-Pro-Display-Semibold.otf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("SF-Pro-Display-Regular.otf") format("truetype");
+  font-weight: 400;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +20,7 @@
 }
 body {
   min-height: 100vh;
+  font-family: "SF Pro Text", sans-serif;
 }
 svg {
   display: block;
@@ -20,6 +36,8 @@ svg {
   align-items: center;
   width: 62.5rem;
   gap: 2rem;
+
+  font-size: 0.75rem;
 }
 .navbar__left,
 .navbar__right {
@@ -34,9 +52,25 @@ svg {
   text-decoration: none;
   gap: 2rem;
   white-space: nowrap;
+  color: rgba(0, 0, 0, 0.8);
 }
 a {
   text-decoration: none;
+  color: black;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgb(29, 29, 31);
+}
+h2 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: rgb(29, 29, 31);
+}
+h3 {
+  font-size: 1.3125rem;
+  font-weight: 400;
 }
 .hero {
   display: flex;
@@ -44,6 +78,8 @@ a {
   align-items: center;
   position: relative;
   overflow: hidden;
+
+  font-family: "SF Pro Display", sans-serif;
 }
 img {
   height: 35rem;
@@ -52,8 +88,22 @@ img {
 }
 .hero__content {
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+.gradient-text {
+  background: linear-gradient(
+    94deg,
+    rgb(0, 144, 247),
+    rgb(186, 98, 252),
+    rgb(242, 65, 107),
+    rgb(245, 86, 0)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
